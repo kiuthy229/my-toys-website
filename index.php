@@ -45,7 +45,8 @@ if ($list){
                     <td> <?php echo $item["price"] ?> </td>
                     <td> <img src="img\<?= $item['image'] ?>" width="140" height="140"/> </td>
                     <td> <?php echo $item["details"] ?> </td>
-                    <td> <a href="#"> Edit </a> &nbsp; | &nbsp; <a href="#">Delete</a> </td>
+                    <td> <a href="#"><button type="button" class="btn btn-danger">Update</button></a>
+                    <a href="#" onClick="return comfirm ('ARE YOU SURE?');"><button type="button" class="btn btn-danger">Delete</button></a> </td>
                 </tr>
                 <?php } ?>
                 <?php } ?>
