@@ -28,7 +28,7 @@
             pg_close($conn);
         }
         catch (Exception $e){
-            $this-> msg= $e-> getMessage();
+            $this->msg= $e-> getMessage();
         }
         return $data;
     }
