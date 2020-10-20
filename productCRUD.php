@@ -89,7 +89,7 @@
                 $this->msg = "Unable to connect PostgreSQL Server";
                 return $success;
             }
-            $query='update "products" where code=$1';
+            $query='update "products" set name='" . ['name'] . "', price='" . ['price'] . "' ,details='" . ['details'] . "' where code=$1';
             $params = array(&$code);
             $res = pg_query_params($conn, $query,$params);
             $row = pg_fetch_row($row);
@@ -105,6 +105,6 @@
             $this->msg = $e->getMessage();
             $success= -1;
         }
-    }
+    }   
 }
 ?>
