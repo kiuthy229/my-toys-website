@@ -51,7 +51,7 @@ if ($list){
                 <?php } ?>
                 <?php } ?>
             </table>
-                        <table>
+            <table>
             <tr>
             <td>Id</td>
             <td>Name</td>
