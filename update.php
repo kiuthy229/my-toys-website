@@ -1,5 +1,5 @@
 <?php
-include('productCRUD.php');
+include('dbconnect.php');
 $result = pg_query($conn,"SELECT * FROM products");
 
 ?>
@@ -30,7 +30,7 @@ $classname="odd";
 <td><?php echo $row["name"]; ?></td>
 <td><?php echo $row["price"]; ?></td>
 <td><?php echo $row["details"]; ?></td>
-<td><a href="update-process.php?userid=<?php echo $row["userid"]; ?>">Update</a></td>
+<td><a href="update-process.php?userid=<?php echo $row["code"]; ?>">Update</a></td>
 </tr>
 <?php
 $i++;
