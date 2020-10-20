@@ -16,10 +16,10 @@ $row= pg_fetch_array($result);
 <div><?php if(isset($message)) { echo $message; } ?>
 </div>
 <div style="padding-bottom:5px;">
-<a href="retrieve.php">Employee List</a>
+<a href="index.php">Employee List</a>
 </div>
 Username: <br>
-<input type="hidden" name="userid" class="txtField" value="<?php echo $row['userid']; ?>">
+<input type="hidden" name="userid" class="txtField" value="<?php echo $row['code']; ?>">
 <input type="text" name="userid"  value="<?php echo $row['code']; ?>">
 <br>
 First Name: <br>
