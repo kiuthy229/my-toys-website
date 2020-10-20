@@ -1,5 +1,7 @@
 <?php
 include('dbconnect.php');
-$result = pg_query($conn,"SELECT * FROM products");
-header('Location: index.php');
+$obj =new ProductCRUD();
+$success = $obj ->createProduct($_POST['code'],$_POST['name'],$_POST['price'],$_POST['image'],
+$_POST['details']);
+header ('Location:index.php');
 ?>
