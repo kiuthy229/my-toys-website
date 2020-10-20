@@ -6,7 +6,7 @@
         private $msg="";
         
     public function getMsg(){
-        return $this-> msg;
+        return $this->msg;
     }
     public function readProducts(){
         $data=array();
@@ -64,6 +64,32 @@
                 return $success;
             }
             $query='delete from "products" where code=$1';
+            $params = array(&$code);
+            $res = pg_query_params($conn, $query,$params);
+            $row = pg_fetch_row($row);
+            if ($res== FALSE){
+                $this->msg ="Error in executing query";
+                return $success;
+            }
+            $num_rows=pg_affected_rows($res);
+            $success=$num_row;
+            $this->msg ="";
+            pg_close($conn);
+        }catch(Exception $e){
+            $this->msg = $e->getMessage();
+            $success= -1;
+        }
+    }
+    public function updateProduct ($code){
+        $success =-1;
+        try{
+            global $connString;
+            $conn = pg_connect($connString);
+            if($conn === false){
+                $this->msg = "Unable to connect PostgreSQL Server";
+                return $success;
+            }
+            $query='update "products" where code=$1';
             $params = array(&$code);
             $res = pg_query_params($conn, $query,$params);
             $row = pg_fetch_row($row);
