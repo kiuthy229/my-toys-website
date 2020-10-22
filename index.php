@@ -81,6 +81,33 @@ if ($list){
         </form>
       </div>
       <?php foreach($list as $item){ ?>
+        <div class="parallax-content projects-content" id="portfolio" style="background-position: center calc(50% + 366px);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="owl-testimonials" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+                        <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 6080px; left: 0px; display: block; transform: translate3d(-760px, 0px, 0px);"><div class="owl-item" style="width: 380px;"><div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/1st-big-item.jpg" data-lightbox="image-1"><img src="img/1st-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Awesome Note Book</h4>
+                                    <span>$18.00</span>
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 380px;"><div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/2nd-big-item.jpg" data-lightbox="image-1"><img src="img\<?= $item['image'] ?>" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Antique Decoration Photo</h4>
+                                    <span>$27.00</span>
+                                </div>
+                            </div>
+                        </div></div>
+                    <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
       <div class="media">
               <img src="img\<?= $item['image'] ?>" width="140" height="140" alt="Image" class="mr-3">
               <div class="media-body tm-bg-pink-light">
