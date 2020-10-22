@@ -100,33 +100,6 @@ if ($list){
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="testimonials-item">
-                                <a href="img/2nd-big-item.jpg" data-lightbox="image-1"><img src="img\<?= $item['image'] ?>" alt=""></a>
-                                <div class="text-content">
-                                    <h4>Antique Decoration Photo</h4>
-                                    <span>$27.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonials-item">
-                                <a href="img/3rd-big-item.jpg" data-lightbox="image-1"><img src="img\<?= $item['image'] ?>" alt=""></a>
-                                <div class="text-content">
-                                    <h4>Work Hand Bag</h4>
-                                    <span>$36.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonials-item">
-                                <a href="img/4th-big-item.jpg" data-lightbox="image-1"><img src="img\<?= $item['image'] ?>" alt=""></a>
-                                <div class="text-content">
-                                    <h4>Smart Watch</h4>
-                                    <span>$45.00</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
