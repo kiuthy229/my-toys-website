@@ -74,7 +74,7 @@ if ($list){
 
     <div class="container">
       <div class="tm-search-form-container">
-        <form action="index.html" method="GET" class="form-inline tm-search-form">
+        <form action="index.php" method="GET" class="form-inline tm-search-form">
           <div class="text-uppercase tm-new-release">New Release</div>
           <div class="form-group tm-search-box">
             <input type="text" name="keyword" class="form-control tm-search-input" placeholder="Type your keyword ...">
@@ -91,16 +91,7 @@ if ($list){
             <div class="row">
                 <div class="col-md-12">
                     <div id="owl-testimonials" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
-                        <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 6080px; left: 0px; display: block; transform: translate3d(-760px, 0px, 0px);"><div class="owl-item" style="width: 380px;"><div class="item">
-                            <div class="testimonials-item">
-                                <a href="img\<?= $item['image'] ?>" data-lightbox="image-1"><img src="img\<?= $item['image'] ?>" width="140" height="140" alt="Image" class="mr-3"></a>
-                                <div class="text-content">
-                                    <h4>Awesome Note Book</h4>
-                                    <span>$18.00</span>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
+                        <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 6080px; left: 0px; display: block; transform: translate3d(-760px, 0px, 0px);">
                       <div class="owl-item" style="width: 380px;">
                       <div class="item">
                             <div class="testimonials-item">
