@@ -85,12 +85,13 @@ if ($list){
           </div>
         </form>
       </div>
-      <?php foreach($list as $item){ ?>
+     
         <div class="parallax-content projects-content" id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div id="owl-testimonials" class="owl-carousel owl-theme">
+                    <?php foreach($list as $item){ ?>
                         <div class="item">
                             <div class="testimonials-item">
                                 <a href="img/1st-big-item.jpg" data-lightbox="image-1"><img src="img\<?= $item['image'] ?>" alt=""></a>
@@ -100,13 +101,14 @@ if ($list){
                                 </div>
                             </div>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-            <?php } ?>
+            
         <?php } ?> 
       <footer class="row">
 
