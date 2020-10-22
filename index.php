@@ -16,14 +16,12 @@ if ($list){
   <link rel="stylesheet" href="css/bootstrap.min.css">                                            <!-- https://getbootstrap.com/ -->
   <link rel="stylesheet" href="css/fontawesome-all.min.css">                                      <!-- Font awesome -->
   <link rel="stylesheet" href="css/tooplate-style.css">                                           <!-- Templatemo style -->
-        <link rel="stylesheet" href="css/fontAwesome.css">
-        <link rel="stylesheet" href="css/hero-slider.css">
-        <link rel="stylesheet" href="css/templatemo-main.css">
-        <link rel="stylesheet" href="css/owl-carousel.css">
-
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  <link rel="stylesheet" href="css/fontAwesome.css">
+  <link rel="stylesheet" href="css/hero-slider.css">
+  <link rel="stylesheet" href="css/templatemo-main.css">
+  <link rel="stylesheet" href="css/owl-carousel.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   <script>
     var renderPage = true;
 
@@ -88,7 +86,7 @@ if ($list){
         </form>
       </div>
       <?php foreach($list as $item){ ?>
-        <div class="parallax-content projects-content" id="portfolio" style="background-position: center calc(50% + 366px);">
+        <div class="parallax-content projects-content" id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
