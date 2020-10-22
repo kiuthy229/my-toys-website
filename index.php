@@ -127,15 +127,6 @@ if ($list){
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="testimonials-item">
-                                <a href="img/1st-big-item.jpg" data-lightbox="image-1"><img src="img/1st-item.jpg" alt=""></a>
-                                <div class="text-content">
-                                    <h4>Awesome Notes Book</h4>
-                                    <span>$96.75</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
