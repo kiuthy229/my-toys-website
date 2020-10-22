@@ -101,14 +101,15 @@ if ($list){
                                 </div>
                             </div>
                         </div>
+                        <?php } ?>
+                         <?php } ?> 
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-          <?php } ?>
-        <?php } ?> 
+          
       <footer class="row">
 
       </footer>
