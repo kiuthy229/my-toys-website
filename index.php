@@ -108,19 +108,6 @@ if ($list){
             </div>
         </div>
     </div>
-      <div class="media">
-              <img src="img\<?= $item['image'] ?>" width="140" height="140" alt="Image" class="mr-3">
-              <div class="media-body tm-bg-pink-light">
-                <div class="tm-description-box">
-                  <h5 class="tm-text-pink"><?php echo $item["name"] ?></h5>
-                  <p class="mb-0">Donec est felis, posuere viverra dapibus ac, pretium vel libero. Aliquam consectetur, arcu eget euismod congue, tortor metus vehicula.</p>
-                </div>
-                <div class="tm-buy-box">
-                  <a href="#" class="tm-bg-pink tm-text-white tm-buy">buy</a>
-                  <span class="tm-text-pink tm-price-tag">Price: $<?php echo $item["price"] ?></span>
-                </div>
-              </div>
-      </div>
             <?php } ?>
         <?php } ?> 
       <footer class="row">
