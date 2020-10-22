@@ -53,7 +53,7 @@ if ($list){
             <nav class="navbar navbar-expand-sm">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a href="service.html" class="nav-link tm-nav-link tm-text-white active">Home</a>
+                  <a href="index.php" class="nav-link tm-nav-link tm-text-white active">Home</a>
                 </li>
                 <li class="nav-item">
                   <a href="login.html" class="nav-link tm-nav-link tm-text-white">Login</a>
@@ -90,23 +90,85 @@ if ($list){
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div id="owl-testimonials" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
-                        <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 6080px; left: 0px; display: block; transform: translate3d(-760px, 0px, 0px);">
-                      <div class="owl-item" style="width: 380px;">
-                      <div class="item">
+                    <div id="owl-testimonials" class="owl-carousel owl-theme">
+                        <div class="item">
                             <div class="testimonials-item">
-                                <a href="img\<?= $item['image'] ?>" data-lightbox="image-1"><img src="img\<?= $item['image'] ?>" alt=""></a>
+                                <a href="img/1st-big-item.jpg" data-lightbox="image-1"><img src="img/1st-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Awesome Note Book</h4>
+                                    <span>$18.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/2nd-big-item.jpg" data-lightbox="image-1"><img src="img/2nd-item.jpg" alt=""></a>
                                 <div class="text-content">
                                     <h4>Antique Decoration Photo</h4>
                                     <span>$27.00</span>
                                 </div>
                             </div>
-                        </div></div>
-                    <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div></div></div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/3rd-big-item.jpg" data-lightbox="image-1"><img src="img/3rd-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Work Hand Bag</h4>
+                                    <span>$36.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/4th-big-item.jpg" data-lightbox="image-1"><img src="img/4th-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Smart Watch</h4>
+                                    <span>$45.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/5th-big-item.jpg" data-lightbox="image-1"><img src="img/5th-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>PC Tablet Draw</h4>
+                                    <span>$63.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/6th-big-item.jpg" data-lightbox="image-1"><img src="img/6th-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Healthy Milkshake</h4>
+                                    <span>$77.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/2nd-big-item.jpg" data-lightbox="image-1"><img src="img/2nd-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Antique Decoration Photo</h4>
+                                    <span>$84.50</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/1st-big-item.jpg" data-lightbox="image-1"><img src="img/1st-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Awesome Notes Book</h4>
+                                    <span>$96.75</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
             <?php } ?>
         <?php } ?> 
       <footer class="row">
