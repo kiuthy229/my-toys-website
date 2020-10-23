@@ -1,11 +1,10 @@
 <?php
-include('dbconnect.php');
+include('productCRUD.php');
 if(count($_POST)>0) {
-pg_query($conn,"UPDATE products set code='" . $_POST['code'] . "', name='" . $_POST['name'] . "', price='" . $_POST['price'] . "', details='" . $_POST['details'] . "' WHERE userid='" . $_POST['userid'] . "'");
+$query='update "products" set name="thy" where code=6';    
+pg_query($conn,$query);
 $message = "Record Modified Successfully";
 }
-$result = pg_query($conn,"SELECT * FROM products WHERE code='" . $_GET['code'] . "'");
-$row= pg_fetch_array($result);
 ?>
 <html>
 <head>
@@ -16,25 +15,25 @@ $row= pg_fetch_array($result);
 <div><?php if(isset($message)) { echo $message; } ?>
 </div>
 <div style="padding-bottom:5px;">
-<a href="index.php">Employee List</a>
+<a href="admin.php">Admin</a>
 </div>
-Username: <br>
-<input type="hidden" name="userid" class="txtField" value="<?php echo $row['code']; ?>">
-<input type="text" name="userid"  value="<?php echo $row['code']; ?>">
+Product ID: <br>
+<input type="hidden" class="txtField" value="<?php echo $row['code']; ?>">
+<input type="text"  value="<?php echo $item['code']; ?>">
 <br>
-First Name: <br>
-<input type="text" name="first_name" class="txtField" value="<?php echo $row['name']; ?>">
+Product Name: <br>
+<input type="text" class="txtField" value="<?php echo $item['name']; ?>">
 <br>
-Last Name :<br>
-<input type="text" name="last_name" class="txtField" value="<?php echo $row['price']; ?>">
+Price:<br>
+<input type="text" class="txtField" value="<?php echo $item['price']; ?>">
 <br>
-City:<br>
-<input type="text" name="city_name" class="txtField" value="<?php echo $row['image']; ?>">
+Image:<br>
+<input type="text" class="txtField" value="<?php echo $item['image']; ?>">
 <br>
-Email:<br>
-<input type="text" name="email" class="txtField" value="<?php echo $row['details']; ?>">
+Details:<br>
+<input type="text" class="txtField" value="<?php echo $item['details']; ?>">
 <br>
-<input type="submit" name="submit" value="Submit" class="buttom">
+<input type="submit" value="Submit" class="buttom">
 
 </form>
 </body>

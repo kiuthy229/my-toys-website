@@ -80,7 +80,7 @@
             $success= -1;
         }
     }
-    public function updateProduct ($code){
+    public function updateProduct ($code,$name,$details,$price,$image){
         $success =-1;
         try{
             global $connString;
@@ -89,11 +89,11 @@
                 $this->msg = "Unable to connect PostgreSQL Server";
                 return $success;
             }
-            $query='update "products" where code=$1';
-            $params = array(&$code);
+            $query='update "products" set name=$2, details=$3, price=$4, image=$5 where code=$1';
+            $params = array(&$code,&$name,&$details,&$price,&$image);
             $res = pg_query_params($conn, $query,$params);
             $row = pg_fetch_row($row);
-            if ($res== FALSE){
+            if ($res=== FALSE){
                 $this->msg ="Error in executing query";
                 return $success;
             }
@@ -105,6 +105,7 @@
             $this->msg = $e->getMessage();
             $success= -1;
         }
+        return $success;
     }   
 }
 ?>

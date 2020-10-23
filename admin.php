@@ -45,39 +45,12 @@ if ($list){
                     <td> <?php echo $item["price"] ?> </td>
                     <td> <img src="img\<?= $item['image'] ?>" width="140" height="140"/> </td>
                     <td> <?php echo $item["details"] ?> </td>
-                    <td> <a href="update-process.php?userid=<?php echo $row["code"]; ?>"><button type="button" class="btn btn-danger">Update</button></a>
+                    <td> <a href="update.php?code=<?=$item["code"]?>"><button type="button" class="btn btn-danger">Update</button></a>
                     <a href="delete.php?code=<?=$item["code"]?>" onClick="return confirm ('ARE YOU SURE?');"><button type="button" class="btn btn-danger">Delete</button></a> </td>
                 </tr>
                 <?php } ?>
                 <?php } ?>
-            </table>
-            <table>
-            <tr>
-            <td>Id</td>
-            <td>Name</td>
-            <td>price</td>
-            <td>details</td>
-            </tr>
-            <?php
-            $i=0;
-            while($row = pg_fetch_array($result)) {
-            if($i%2==0)
-            $classname="even";
-            else
-            $classname="odd";
-            ?>
-            <tr class="<?php if(isset($classname)) echo $classname;?>">
-            <td><?php echo $row["code"]; ?></td>
-            <td><?php echo $row["name"]; ?></td>
-            <td><?php echo $row["price"]; ?></td>
-            <td><?php echo $row["details"]; ?></td>
-            <td><a href="update-process.php?userid=<?php echo $row["code"]; ?>">Update</a></td>
-            </tr>
-            <?php
-            $i++;
-            }
-            ?>
-            </table>
+            </table>          
         </div>
     </body>
 </html>
