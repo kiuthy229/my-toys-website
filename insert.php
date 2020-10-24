@@ -4,7 +4,7 @@ if (isset($_POST['add'])){
     $obj =new ProductCRUD();
     $success = $obj ->createProduct($_POST['code'],$_POST['name'],$_POST['price'],$_POST['image'],
     $_POST['details']);
-    header ('Location:index.php');
+    header ('Location:admin.php');
 }
 ?>
 <!DOCTYPE html>
@@ -42,9 +42,6 @@ if (isset($_POST['add'])){
         <input type="text" class="form-control" id="details" placeholder="Enter details" name="details">
         </div>
         <div class="form-group form-check">
-        <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" name="remember"> Remember me
-        </label>
         </div>
         <button type="submit" class="btn btn-primary" name="add">ADD NEW</button>
     </form>
