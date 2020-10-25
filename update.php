@@ -15,10 +15,27 @@ if (count($_POST)>0){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>ThewayShop - Ecommerce Bootstrap 4 HTML Template</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
     </head>
     <body>
 <div class="container">
-    <h2>Add a new item</h2>
+    <h2>Update an item</h2>
     <form action=<?php echo $_SERVER['PHP_SELF'] ?> method="POST">
         <div class="form-group">
         <label for="code">Product code</label>
@@ -42,7 +59,6 @@ if (count($_POST)>0){
         </div>
         <div class="form-group form-check">
         <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" name="remember"> Remember me
         </label>
         </div>
         <button type="submit" class="btn btn-primary" name="add">ADD NEW</button>

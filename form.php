@@ -1,16 +1,8 @@
-<?php
-include('productCRUD.php');
-session_start();
-if (isset($_POST['btn_submit'])){
-    $obj =new ProductCRUD();
-    $success = $obj ->login($_POST['username'],$_POST['password']);
-}
-?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Trang đăng nhập</title>
-    <meta charset="utf-8">
-    <meta charset="UTF-8">
+	<title>Login V3</title>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="img/icons/favicon.ico"/>
@@ -33,11 +25,11 @@ if (isset($_POST['btn_submit'])){
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 </head>
 <body>
-
-<form method="POST" action="login.php">
-    <div class="limiter">
+	
+	<div class="limiter">
 		<div class="container-login100" style="background-image: url('img/bg-01.jpg');">
 			<div class="wrap-login100">
 				<form class="login100-form validate-form">
@@ -55,7 +47,7 @@ if (isset($_POST['btn_submit'])){
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="password" placeholder="Password">
+						<input class="input100" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
 
@@ -81,8 +73,26 @@ if (isset($_POST['btn_submit'])){
 			</div>
 		</div>
 	</div>
-  </form>
+	
 
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
 
 </body>
 </html>

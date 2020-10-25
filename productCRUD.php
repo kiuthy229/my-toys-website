@@ -107,5 +107,49 @@
         }
         return $success;
     }   
+    public function login($username, $password){
+        $success =-1;
+        try{
+            global $connString;
+            $conn = pg_connect($connString);
+            if($conn === false){
+                $this->msg = "Unable to connect PostgreSQL Server";
+                return $success;
+            }
+        
+		//làm sạch thông tin, xóa bỏ các tag html, ký tự đặc biệt 
+		//mà người dùng cố tình thêm vào để tấn công theo phương thức sql injection
+		$username = strip_tags($username);
+		$username = addslashes($username);
+		$password = strip_tags($password);
+		$password = addslashes($password);
+		if ($username == "" || $password =="") {
+			echo "You cannot leave the username or passwork blank!";
+		}else{
+			$query = 'select username from "users" where username=$1';
+            $params = array(&$username);
+            $res = pg_query_params($conn, $query,$params);
+			$num_rows = pg_num_rows($res);
+			if ($num_rows==0) {
+				echo "Wrong username";
+			}else{
+                $query = 'select password from "users" where password=$1';
+                $params = array(&$password);
+                $res = pg_query_params($conn, $query,$params);
+                $num_rows = pg_num_rows($res);
+                if ($num_rows==0) {
+				echo "Wrong password";
+			}else{
+				$_SESSION['username'] = $username;
+                header('Location: admin.php');
+            }
+			}
+        }
+    }catch(Exception $e){
+        $this->msg = $e->getMessage();
+        $success= -1;
+    }
+	}
+    
 }
 ?>

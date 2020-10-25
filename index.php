@@ -30,12 +30,6 @@ if ($list){
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body>
@@ -46,7 +40,7 @@ if ($list){
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="our-link">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user s_color"></i> Admin Login</a></li>
+                            <li><a href="login.php"><i class="fa fa-user s_color"></i> Admin Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -248,10 +242,7 @@ if ($list){
             <div class="col-lg-3 col-md-6 special-grid best-seller">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Sale</p>
-                            </div>
-                            <img src="img\<?= $item['image'] ?>" class="img-fluid" alt="Image">
+                            <a href="shop-detail.php"><img src="img\<?= $item['image'] ?>"  width="150" height="230" class="img-fluid" alt="Image"></a>
                             <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -262,8 +253,8 @@ if ($list){
                             </div>
                         </div>
                         <div class="why-text">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <h5> $7.79</h5>
+                            <h4><?php echo $item["name"] ?></h4>
+                            <h5>Price: $<?php echo $item["price"] ?></h5>
                         </div>
                     </div>
                 </div>
@@ -280,7 +271,7 @@ if ($list){
         <?php foreach($list as $item){ ?>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="img\<?= $item['image'] ?>" alt="" />
+                    <a href="shop-detail.php"><img src="img\<?= $item['image'] ?>" width="150" height="230" alt="" /></a>
                     <div class="hov-in">
                         <a href="#"><?php echo $item["name"] ?></a>
                     </div>
@@ -298,13 +289,6 @@ if ($list){
         
     </footer>
     <!-- End Footer  -->
-
-    <!-- Start copyright  -->
-    <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
-            <a href="https://html.design/">html design</a></p>
-    </div>
-    <!-- End copyright  -->
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
